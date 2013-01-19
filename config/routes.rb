@@ -4,9 +4,6 @@ Fygp::Application.routes.draw do
   #controllers are the glue between models and views in an MVC architecture
   root to: 'content#home'
 
-  resources :lesson_plans
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
