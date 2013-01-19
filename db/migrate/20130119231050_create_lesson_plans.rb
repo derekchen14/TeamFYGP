@@ -1,7 +1,5 @@
 class CreateLessonPlans < ActiveRecord::Migration
   def change
-    drop_table :lesson_plans
-
     create_table :lesson_plans do |t|
       t.string :name
       t.string :subject
