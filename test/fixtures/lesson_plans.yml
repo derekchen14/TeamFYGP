@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tags: MyString
+  grade: 1
+  subject: MyString
+  length: 1
+  difficulty: MyString
+  content: MyString
+
+two:
+  tags: MyString
+  grade: 1
+  subject: MyString
+  length: 1
+  difficulty: MyString
+  content: MyString

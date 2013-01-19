@@ -18,6 +18,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # Google's V8 JavaScript runtime, necessary for precompiling assets
+  gem 'libv8'
+
+  # For pretty styles
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
