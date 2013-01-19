@@ -20,9 +20,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
 
-  # Google's V8 JavaScript runtime, necessary for precompiling assets
-  gem 'libv8'
-  gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass', '~> 2.2.2.0'
 end
 
 
