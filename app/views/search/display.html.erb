@@ -62,16 +62,16 @@
 		</tr>
 		<% if @plans %>
 		  <% @plans.each do |plan| %> 
-		    <tr <%= "onclick=\"document.location = 'lesson_plan/#{plan.id}';\"" %>>
+		    <tr <%= "onclick=\"document.location = 'lesson_plan/#{plan.id}';\"".html_safe %>>
 		    	<td class="subject"><p><%= plan.subject %><p></td>
 		    	<td class="icon"><span class="iconContainer <%= plan.subject.downcase %>"></span></td>
 		    	<td class="title">
 		    		<h4><%= plan.name %></h4>
 		    		<p><%= plan.short %></p>
 		    	</td>
-		    	<td class="author"><p>Author<p></td>
-		    	<td class="grade"><p><%= plan.tags.where("name like 'Grade%'").name %><p></td>
-		    	<td class="time"><p><%= plan.tags.where("name like '%minutes'").name %><p></td>
+		    	<td class="author"><p><%= plan.author.name %><p></td>
+		    	<td class="grade"><p><%= plan.tags.where("name like 'Grade%'").map(&:name).first %><p></td>
+		    	<td class="time"><p><%= plan.tags.where("name like '%minutes'").map(&:name).first %><p></td>
 		    	<td class="rating">
 		    		<span class="iconContainer starsFour"></span>
 		    		<p><a href="#"><%= plan.ratings.count.to_s + " ratings" %></a></p>
