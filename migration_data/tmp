@@ -1,0 +1,12 @@
+Rating(id: integer, rater_id: integer, rated_id: integer, rating: integer,
+	type: string, created_at: datetime, updated_at: datetime) 
+
+CSV.open('migration_data/Models_Ratings.csv', 'r').each do |row|
+Rating.create(:author_id => row[1], :lesson_plan_id => row[2], :rating => row[3])
+end
+
+
+CSV.open('migration_data/Models_Authors.csv', 'r').each do |row|
+Author.create(:name => row[1], :login => row[2])
+end
+
