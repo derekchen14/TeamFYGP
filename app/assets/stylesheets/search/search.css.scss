@@ -1,6 +1,7 @@
 body	{font-family:Verdana, Arial, sans-serif; margin:12px}
 p, ul, li		{font-size: 13px}
 h2	{font-size:12px; font-weight:bold;margin-top:12px; margin-bottom:4px;}
+h3			{font-size:12px; font-weight:bold; color:#fff;}
 ul		{margin-bottom:16px}
 li		{line-height:1.5em}
 .star	{width:120px; display:block; height:20px; }
@@ -16,3 +17,49 @@ li		{line-height:1.5em}
 .r4_5	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -198px;}
 .r5		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -220px;}
 .starText	{margin-left:122px; display:inline-block; width:100px;}
+
+.resultsListContainer {
+	position:absolute;
+	top:0;
+	right:0px;
+	bottom:24px;
+	left:230px;
+}
+
+.resultsList {width:100%;}
+.resultsList th {
+	background-color:#474ab1;
+	padding:10px;
+	text-align:left;
+}
+
+.resultsList td {
+	padding:8px 6px;
+	text-align:left;
+	vertical-align:top;
+}
+
+.resultsList .title {width:300px;}
+.resultsList .title p {
+	line-height:1.3em;
+	margin-right:24px;
+}
+
+.resultsList .icon 	{width:60px;}
+.resultsList .icon .iconContainer	{
+	background-image:url(/assets/shared/icons_schoolSubjects.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+}
+.resultsList .icon .iconContainer.english	{background-position:0px -3px;}
+.resultsList .icon .iconContainer.math	{background-position:0px -70px;}
+
+.resultsList .rating {width:150px;}
+.resultsList .rating .iconContainer {display:inline-block; width:100px; height:24px;}
+.resultsList .rating .iconContainer.starsOne {background:#fff url(/assets/shared/rating_stars.png) no-repeat 0px -42px;}
+.resultsList .rating .iconContainer.starsTwo {background:#fff url(/assets/shared/rating_stars.png) no-repeat 0px -87px;}
+.resultsList .rating .iconContainer.starsThree {background:#fff url(/assets/shared/rating_stars.png) no-repeat 0px -130px;}
+.resultsList .rating .iconContainer.starsFour {background:#fff url(/assets/shared/rating_stars.png) no-repeat 0px -176px;}
+.resultsList .rating .iconContainer.starsFive {background:#fff url(/assets/shared/rating_stars.png) no-repeat 0px -220px;}
+.resultsList .rating p {font-size:10px}

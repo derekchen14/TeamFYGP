@@ -14,9 +14,17 @@ class LessonPlan < ActiveRecord::Base
       ratings_arr << rating.rating
     end
 
-    ratings_arr.sum/ratings_arr.length if (ratings_arr.length != 0)
+    #check for division by 0
+    if ratings_arr.length == 0
+      return 0
+    end
+
+    ratings_arr.sum/ratings_arr.length
   end
 
+  def short
+    description[0..100]
+  end
 
   ##########################################################
   #
@@ -24,31 +32,58 @@ class LessonPlan < ActiveRecord::Base
   #
   ##########################################################
 
+  GRADES  = {:"1" => [1,2], :"3" => [3,4,5], :"6" => [6, 7, 8], :"9" => [9, 10, 11, 12], :K => [], }
+
   # Search by grade, returns lesson_plans which are the grade passed in
   def self.search_by_grade(grade)
-    tags = Tag.where(name: "Grade " + grade.to_s)
-    plans = Array.new(tags.size) {|index| tags[index].lesson_plan}
+    if grade == "all"
+      return LessonPlan.all
+    end
+
+    grades = GRADES[grade.to_s.to_sym]
+    tags_arr = Array.new(grades.size) {|index| Tag.where(name: "Grade " + grades[index].to_s)}
+    plans = []
+    tags_arr.each do |tags|
+      tags.each do |tag|
+        plans << tag.lesson_plan unless tag.blank?
+      end
+    end
+
+    plans
   end
 
   # Search by difficulty, returns lesson_plans which are the difficulty pass in
   def self.search_by_difficulty(difficulty)
+    if difficulty == "all"
+      return LessonPlan.all
+    end
     tags = Tag.where(name: difficulty)
     plans = Array.new(tags.size) {|index| tags[index].lesson_plan}
   end
 
   # Search by length, returns lesson_plans which are the length pass in
   def self.search_by_length(length)
-    tags = Tag.where(name: length + " minutes")
+    if length == "all"
+      return LessonPlan.all
+    end
+    tags = Tag.where(name: length.to_s + " minutes")
     plans = Array.new(tags.size) {|index| tags[index].lesson_plan}
   end
 
   # Search by subject, returns lesson_plans which are the subject pass in
   def self.search_by_subject(subject)
+    if subject == "all"
+      return LessonPlan.all
+    end
     LessonPlan.where(subject: subject)
   end
 
   # Search by rating, returns lesson_plans which are the rating pass in
   def self.search_by_rating(rating)
+    if rating == "all"
+      return LessonPlan.all
+    end
+
     #do the conversion to integer so we can use the rating in math equations
     rating = rating.to_i
     plans = []
