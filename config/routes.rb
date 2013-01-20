@@ -5,6 +5,7 @@ Fygp::Application.routes.draw do
   root to: 'content#home'
 
   match '/search' => 'search#search'
+  match '/lesson_plan/:id' => 'lesson#view'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
