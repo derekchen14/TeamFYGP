@@ -1,0 +1,18 @@
+body	{font-family:Verdana, Arial, sans-serif; margin:12px}
+p, ul, li		{font-size: 13px}
+h2	{font-size:12px; font-weight:bold;margin-top:12px; margin-bottom:4px;}
+ul		{margin-bottom:16px}
+li		{line-height:1.5em}
+.star	{width:120px; display:block; height:20px; }
+.r0		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px 0px;}
+.r05	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -21px;}
+.r1		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -43px;}
+.r1_5	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -65px;}
+.r2		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -87px;}
+.r2_5	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -108px;}
+.r3		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -130px;}
+.r3_5	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -152px;}
+.r4		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -176px;}
+.r4_5	{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -198px;}
+.r5		{background:#fff url(/assets/shared/rating_stars.png) no-repeat 22px -220px;}
+.starText	{margin-left:122px; display:inline-block; width:100px;}

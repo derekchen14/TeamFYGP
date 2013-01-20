@@ -5,6 +5,7 @@ class SearchController < ApplicationController
   end
 
   def display
+    @title = 'Search by '
   end
 
 end
