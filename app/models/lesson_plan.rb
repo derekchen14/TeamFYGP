@@ -1,5 +1,5 @@
 class LessonPlan < ActiveRecord::Base
-  attr_accessible :author_id, :description, :grade, :name, :subject
+  attr_accessible :author_id, :description, :grade, :name, :subject, :id
 
   belongs_to :author
   has_many :tags
@@ -11,10 +11,10 @@ class LessonPlan < ActiveRecord::Base
     ratings_arr = []
 
     ratings.each do |rating|
-      ratings_arr << rating.value
+      ratings_arr << rating.rating
     end
 
-    ratings_arr.sum/ratings_arr.length
+    ratings_arr.sum/ratings_arr.length if (ratings_arr.length != 0)
   end
 
 end
