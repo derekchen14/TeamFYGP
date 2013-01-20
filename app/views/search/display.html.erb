@@ -73,8 +73,8 @@
 		    	<td class="grade"><p><%= plan.tags.where("name like 'Grade%'").map(&:name).first %><p></td>
 		    	<td class="time"><p><%= plan.tags.where("name like '%minutes'").map(&:name).first %><p></td>
 		    	<td class="rating">
-		    		<span class="iconContainer starsFour"></span>
-		    		<p><a href="#"><%= plan.ratings.count.to_s + " ratings" %></a></p>
+		    		<span class="iconContainer stars<%= plan.rating_name.capitalize %>"></span>
+		    		<p><a href="#"><%= plan.ratings.count.to_s + " teacher ratings" %></a></p>
 		    	</td>
 		    </tr>
 		  <% end %>

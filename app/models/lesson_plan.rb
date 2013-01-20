@@ -22,6 +22,21 @@ class LessonPlan < ActiveRecord::Base
     ratings_arr.sum/ratings_arr.length
   end
 
+  def rating_name
+    case avg_rating.round
+    when 1
+      "one"
+    when 2
+      "two"
+    when 3
+      "three"
+    when 4
+      "four"
+    when 5
+      "five"
+    end
+  end
+
   def short
     description[0..100]
   end
