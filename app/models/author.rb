@@ -1,5 +1,5 @@
 class Author < ActiveRecord::Base
-  attr_accessible :login, :name
+  attr_accessible :login, :name, :id
 
   has_many :lesson_plans
   has_many :comments

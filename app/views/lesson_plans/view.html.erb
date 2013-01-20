@@ -1,0 +1,207 @@
+
+
+	<!-- 
+	
+	<script src="http://code.jquery.com/jquery-1.8.3.js" ></script>
+	<script src="js/bootstrap.js"></script>
+	
+	-->
+
+<div id="container" class="container">
+	<div class="row">
+		<div id="logo" class="span12">
+			<h1 class="muted">LOGO</h1>
+			<p>
+				<a href="#">&lt; back to search results</a>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div id="title" class="span8">
+			<h3>Intro to Technical Reading &amp; Writing</h3>
+		</div>
+		<div id="author" class="span3 offset1">
+			<img src="http://placekitten.com/30/30">
+			<a href="#">Jane D.</a>
+			<img height="30%" width="30%" src="/assets/lesson_plans/stars.png">
+		</div>
+	</div>
+	<div id="rating">
+		<% if (@lesson_plan.avg_rating > 0 && @lesson_plan.avg_rating <= 0.5) then %>
+			Lesson Rating: <span class="star r0"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 0 && @lesson_plan.avg_rating <= 0.5) then %>
+			Lesson Rating: <span class="star r05"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 0.5 && @lesson_plan.avg_rating <= 1) then %>
+			Lesson Rating: <span class="star r1"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 1 && @lesson_plan.avg_rating <= 1.5) then %>
+			Lesson Rating: <span class="star r1_5"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 1.5 && @lesson_plan.avg_rating <= 2) then %>
+			Lesson Rating: <span class="star r2"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 2 && @lesson_plan.avg_rating <= 2.5) then %>
+			Lesson Rating: <span class="star r2_5"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 2.5 && @lesson_plan.avg_rating <= 3) then %>
+			Lesson Rating: <span class="star r3"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 3 && @lesson_plan.avg_rating <= 3.5) then %>
+			Lesson Rating: <span class="star r3_5"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 3.5 && @lesson_plan.avg_rating <= 4) then %>
+			Lesson Rating: <span class="star r4"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 4 && @lesson_plan.avg_rating <= 4.5) then %>
+			Lesson Rating: <span class="star r4_5"></span>
+		<% end %>
+		<% if (@lesson_plan.avg_rating > 4 && @lesson_plan.avg_rating <= 4.5) then %>
+			Lesson Rating: <span class="star r5"></span>
+		<% end %>
+	</div>
+	<div class="row">
+			<div id="quick-summary" class="span8">
+				Subject: <a href="#"><%= @lesson_plan.subject %></a><br>
+				Intended Audience: <a href="#">College Students</a><br>
+				Common Core Standards: <a href="#">[keywords]</a>
+			</div>
+			<div id="share buttons" class="span2 offset2">
+				<img width="20%" height="20%" src="/assets/lesson_plans/favorites.png">
+				<img width="40%" height="40%" src="/assets/lesson_plans/share-buttons2.png">
+			</div>
+		</div>
+		<div id="lesson-plan">
+			<div class="row">
+				<div class="span6">
+					<h4>Lesson Plan: </h4>
+					<strong>Prep Time:</strong> 20 bajillion hours<br>
+					<strong>Lesson Time:</strong> 1 hour<br>
+				</div>
+				<div class="download-button span3 offset3">
+					<button class="btn btn-primary">Download PDF of the Lesson</button>
+					<!-- Modal Button -->
+					<button id="modalButton" class="btn btn-primary">Email Lesson to a Friend</button>
+				</div>
+			</div>
+				<p>
+				<h5>Icebreaker / Introductions</h5>	
+				Students introduce themselves to a partner and ask
+					<ol>
+						<li>How they found out about the program</li>
+						<li>A life experience that taught them something. (This can be anything.)</li>
+					</ol>
+					Teacher gives his or her own answers to these questions. Then tell students they have 4 minutes total, or 2 minutes each to answer. After they finish, Ss share out their partner's experience with the class.
+					</p>
+				<h5>Teacher introduces themselves:</h5>
+					<ul>
+						<li>Personal background</li>
+						<li>Educational background</li>
+						<li>Professional background - mention how teachers also have to hustle for work</li>
+					</ul>
+				<h5>Max-Min Activity</h5>
+				<p>
+				Discuss in partners, "What things have you done personally to maximize your learning?"
+				</p>
+				<p>
+				Write students' answers on board.
+				</p>
+				<p>
+				"Now, what are things you've done to minimize your learning?"" (If needed, say
+				something like, “Come on folks, it's honesty time.”) [Write answers on board]
+				The point of this exercise is to show how Ss are responsible for their own learning in this
+				class.
+				</p>
+				<h5>Class Philosophy</h5>
+				<p>
+				Write up, "The goal of this class is for every student to learn the technical reading and
+				writing skills needed to get and keep a machining job."
+				</p>
+				<p>
+				"One thing almost all of you have in common is that your learning experience was
+				uncomfortable. The teacher's job is to put students into their discomfort zone, because
+				that's where you learn the most [draw below diagram on board &amp; refer back to what
+				students said during the intro] My goal is for all of you to feel uncomfortable at different
+				times throughout this course."
+				</p>
+				<p><strong>UPDATES: </strong><br>
+					<ul>
+						<li>zomg, one of my students spilled stuff over my entire lesson plan, so I improved - turned out ok</li>
+						<li>tried this lesson again, with some amazing addition - it was AWESOME</li>
+					</ul>
+				</p>
+		</div>
+		<div id="materials">
+			<h4>Materials Needed: </h4>
+			<p>
+				<ul>
+					<li><a href="#">Syllabus (link to resource)</a></li>
+					<li><a href="#">Student Survey (link to resource)</a></li>
+					<li>Selection from Operations Manual for Machine Tool Technology</li>
+				</ul>
+			</p>
+		</div>
+		<div class="download-button">
+			<button class="btn btn-primary">Download PDF of the Lesson</button>
+		</div>
+		<div class="related-content">
+			<h5>If you liked this lesson, you might also like:</h5>
+			<img src="http://placekitten.com/100/100">
+			<img src="http://placekitten.com/100/100">
+			<img src="http://placekitten.com/100/100">
+			<img src="http://placekitten.com/100/100">
+			<img src="http://placekitten.com/100/100">
+		</div>
+		<div id="comments">
+			<img src="/assets/lesson_plans/recent_comments.png">
+		</div>
+	</div>
+	<!-- Modal -->
+	<div id="modalDiv" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+	    <h4 id="myModalLabel">Email this lesson to a friend!</h4>
+	  </div>
+	  <div class="modal-body">
+		<form>
+	<div class="modal-body">
+		<div>
+		<label>Friend's Name:</label>
+		<input type="text"/>
+	    </div>
+	    <div>
+		<label>Friend's Email:</label>
+		<input type="email"/>
+	    </div>
+	    <div>
+		<label>Your Name:</label>
+		<input type="text"/>
+	    </div>
+	    <div>
+		<label>Your Email:</label>
+		<input type="email"/>
+	    </div>
+	    <div>
+		<label>Message to Friend (optional):</label>
+		<textarea></textarea>
+	    </div>
+	</div>
+	<div class="modal-footer">
+		<button id="saveNewFood" class="btn btn-primary">Send Email</button>
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Nevermind</button>
+	</div>
+    	</form>
+	  </div>
+    </div>
+</div>
+
+	<script>
+	var modalButton = $('#modalButton');
+	var modalDiv = $('#modalDiv');
+	modalButton.on('click', function() {
+		modalDiv.modal();
+	});
+	</script>
+
+
