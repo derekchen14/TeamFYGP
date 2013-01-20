@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130120002441) do
+ActiveRecord::Schema.define(:version => 20130120012849) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -33,18 +33,23 @@ ActiveRecord::Schema.define(:version => 20130120002441) do
     t.string   "subject"
     t.string   "description"
     t.integer  "author_id"
-    t.string   "grade"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "ratings", :force => true do |t|
-    t.integer  "rater_id"
-    t.integer  "rated_id"
+    t.integer  "lesson_plan_id"
+    t.integer  "author_id"
     t.integer  "rating"
-    t.string   "type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "lesson_plan_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "tags", :force => true do |t|

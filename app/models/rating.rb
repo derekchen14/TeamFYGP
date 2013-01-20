@@ -1,5 +1,7 @@
 class Rating < ActiveRecord::Base
-  attr_accessible :rater_id, :rated_id, :rating
+  attr_accessible :author_id, :lesson_plan_id, :value
 
-  belongs_to :rater, class_name: 'Author'
+  belongs_to :author
+  belongs_to :lesson_plan
+
 end
