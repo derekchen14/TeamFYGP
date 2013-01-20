@@ -4,6 +4,7 @@ Fygp::Application.routes.draw do
   #controllers are the glue between models and views in an MVC architecture
   root to: 'content#home'
 
+  match '/search' => 'search#search'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
