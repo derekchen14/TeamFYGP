@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="container" class="container">
+  <div class="row">
+    <div class="span12">
+      <img src="/assets/banner.png" />
+    </div>
+  </div>
+</div>  
 <%= yield %>
-
+<div id="footer">
+    <div class="container">
+        <p class="muted credit"><br>Courtesy <a href="#">Anna, Chaim, Dan, Derek, Kate, Kishore, Laura, Lillian</a> and <a href="#">Ondine</a>.<br> <br></p>
+    </div> <!-- footer container -->
+</div> <!-- footer -->
 </body>
 </html>

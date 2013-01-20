@@ -2,7 +2,6 @@ Fygp::Application.routes.draw do
 
   #this is the default route, which leads to the controller action #home
   #controllers are the glue between models and views in an MVC architecture
-  root to: 'content#home'
 
   match '/search' => 'search#search'
   match '/display' => 'search#display'
