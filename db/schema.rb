@@ -52,4 +52,11 @@ ActiveRecord::Schema.define(:version => 20130120012849) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "lesson_plan_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
 end
