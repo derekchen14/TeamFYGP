@@ -4,8 +4,6 @@ class LessonPlan < ActiveRecord::Base
   belongs_to :author
   has_many :tags
   has_many :comments
+  has_many :ratings
 
-  def ratings
-    Rating.where(rated_id: id)
-  end
 end
