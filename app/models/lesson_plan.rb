@@ -63,4 +63,5 @@ class LessonPlan < ActiveRecord::Base
     # return the lesson plans
     plans
   end
+
 end
